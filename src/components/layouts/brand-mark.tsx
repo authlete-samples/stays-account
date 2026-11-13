@@ -20,23 +20,14 @@ export function BrandMark({ className }: { className?: string }) {
       />
     );
   }
+  // Stays' mark: a sun over the water. Drawn in currentColor so it adapts to the surface.
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden className={cn("h-6 w-6", className)}>
-      <rect x="3" y="3" width="18" height="18" rx="5" fill="currentColor" opacity="0.12" />
-      <rect
-        x="3.75"
-        y="3.75"
-        width="16.5"
-        height="16.5"
-        rx="4.25"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <circle cx="12" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="12" cy="9.5" r="4" fill="currentColor" />
       <path
-        d="M7.5 17c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5"
+        d="M3.5 16.5h17M6.5 20h11"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
       />
     </svg>

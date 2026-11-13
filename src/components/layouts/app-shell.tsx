@@ -28,9 +28,11 @@ export function AppShell({ children, title, description }: Props) {
     <div className="flex min-h-svh flex-col">
       <header className="border-b bg-background">
         <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-2 text-sm font-medium tracking-tight">
-            <BrandMark />
-            <span>{activeBrand.productName}</span>
+          <Link href="/" className="flex items-center gap-2 tracking-tight">
+            <BrandMark className="text-primary" />
+            <span className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+              {activeBrand.productName}
+            </span>
           </Link>
           <UserButton size="icon" links={USER_LINKS} />
         </div>

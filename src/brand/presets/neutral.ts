@@ -11,6 +11,7 @@ const SYSTEM_SANS =
 export const neutral: Brand = {
   productName: "Auth UI",
   fontFamily: SYSTEM_SANS,
+  fontDisplay: SYSTEM_SANS,
   accent: "hsl(215 20% 65%)",
   light: {
     primary: "hsl(222.2 47.4% 11.2%)",

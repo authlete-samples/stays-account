@@ -10,7 +10,7 @@
  * it speaks the same authorization protocol to the AS.
  */
 
-import { neutral } from "./presets/neutral";
+import { stays } from "./presets/stays";
 
 /** Brand-carrying colors that differ between light and dark mode. */
 export type ColorScheme = {
@@ -26,8 +26,10 @@ export type Brand = {
   productName: string;
   /** Logo image path under /public. Falls back to a neutral built-in mark. */
   logoMark?: string;
-  /** CSS font-family stack applied as --font-sans. */
+  /** CSS font-family stack applied as --font-sans (body text). */
   fontFamily: string;
+  /** Display font stack applied as --font-display (the wordmark and headlines). */
+  fontDisplay: string;
   /** Highlight color on the (always-dark) sign-in panel. */
   accent: string;
   light: ColorScheme;
@@ -43,7 +45,7 @@ export type Brand = {
 };
 
 /** The brand the app renders. Swap this to rebrand. */
-export const activeBrand: Brand = neutral;
+export const activeBrand: Brand = stays;
 
 /**
  * Serializes a brand's tokens into a CSS string for injection at the document
@@ -55,6 +57,7 @@ export function brandCssVars(b: Brand): string {
   return `
 :root {
   --font-sans: ${b.fontFamily};
+  --font-display: ${b.fontDisplay};
   --brand-accent: ${b.accent};
   --brand-panel: ${b.panel.background};
   --primary: ${b.light.primary};

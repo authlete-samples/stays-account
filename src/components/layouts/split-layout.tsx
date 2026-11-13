@@ -39,11 +39,19 @@ function BrandPanel({ headline, subhead }: { headline: string; subhead: string }
     >
       <div className="absolute left-12 top-10 flex items-center gap-2 text-white">
         <BrandMark className="h-7 w-7" />
-        <span className="text-lg font-semibold tracking-tight">{activeBrand.productName}</span>
+        <span
+          className="text-lg font-semibold tracking-tight"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {activeBrand.productName}
+        </span>
       </div>
       <div className="relative max-w-md space-y-4">
         <span aria-hidden className="block h-[1.5px] w-[70px] bg-brand-accent" />
-        <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        <h2
+          className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
           {headline}
         </h2>
         <p className="text-sm text-white/80">{subhead}</p>
